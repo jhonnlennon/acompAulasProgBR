@@ -1,0 +1,54 @@
+body{
+    margin: 10px;
+    padding: 10px;
+}
+.cartaoVisita{
+    width: 700px;
+    height: 320px;
+    background-repeat: no-repeat;
+    background-image: url(../img/cartaoVisita/backgorund.png);
+    border: 1px solid black;
+}
+h1{
+    margin-top: 35px;
+    margin-left: 45px;
+    font-size: 50px;
+}
+h3{
+    margin-top: -30px;
+    margin-left: 75px;
+    font-size: 10px;
+    text-shadow: 2px 2px 8px blue
+    /*aqui cria uma sombra, sendo: direita, abaixo, intensidade e cor.*/;
+}
+ul{
+    margin-top: 25px;
+    margin-left: 55px;
+    font-size: 25px;
+    line-height: 50px;
+}
+#youtube{
+    list-style-image: url(../img/cartaoVisita/Youtube.png);
+}
+#instagram{
+    list-style-image: url(../img/cartaoVisita/Insta.png);
+}
+#twitter{
+    list-style-image: url(../img/cartaoVisita/Twitter.png);
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: blueviolet;
+}
+a:active{
+    color: crimson;
+}
+
+/*Não é bom usar, tira os efeitos de cima depois que acessa.*/
+ /* a:visited{
+    color: darkgreen;
+ } */

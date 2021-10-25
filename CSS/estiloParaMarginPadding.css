@@ -1,0 +1,43 @@
+body{
+    margin: 0;
+    padding: 0;
+    /*aqui é para zerar a margem e o padding*/
+    /*O Padding é a distancia da borda para o conteudo*/
+}
+
+.container{
+    background-color: blueviolet;
+    padding: 10px;
+    border: 5px solid blue;
+    margin: 10px; /*Agora eu afastei esta div do canto da sala*/
+}
+.conteudo{
+    background-color: crimson;
+    padding: 10px;
+    outline: chartreuse; /*Esse cara aqui não altera o box
+    ou seja, ele existe, mas não altera o amanhos dos outros elementos.
+    É como se ele existisse mas estivesse por cima de tudo.*/
+}
+
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: darkgoldenrod;
+    border: 10px solid blue;
+    box-sizing: border-box;
+}
+.square2{
+    width: 100px;
+    height: 100px;
+    background-color: darkgoldenrod;
+
+}
+
+/*Os exemplos acima mostram que quando usamos uma borda
+o elemento passa a ter o valor da unidade de medida acrescentada.
+Ou seja, temos 100px de largura, mais 10px de cada lado da borda.
+O mesmo serve para o padding.*/
+
+/*Para evitar isso, usamos a tag box-sizing: border-box*/
+/*Ela vai forçar todos os elemento ficarem dentro do tamanho
+que foi definido na classe ou id que coloca-la.*/

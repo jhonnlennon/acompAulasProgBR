@@ -1,0 +1,95 @@
+#principal{  
+    color:blueviolet;
+}
+
+#titulo{
+    color: brown;
+}
+
+.texto_verde{
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: rgb(247, 41, 110);
+}
+
+/*um comentário*/
+
+#cm{
+    background-color: darkblue;
+    width: 1cm; /*largura*/
+    height: 1cm; /*altura*/
+}
+#mm{
+    background-color: rgb(139, 0, 0);
+    width: 1mm; /*largura*/
+    height: 1mm; /*altura*/
+}
+#in{
+    background-color: rgb(26, 241, 188);
+    width: 1in; /*largura*/
+    height: 1in; /*altura*/
+}
+#px{
+    background-color: rgb(248, 196, 25);
+    width: 1px; /*largura*/
+    height: 1px; /*altura*/
+}
+#pt{
+    background-color: rgb(250, 28, 150);
+    width: 1pt; /*largura*/
+    height: 1pt; /*altura*/
+}
+#pc{
+    background-color: rgb(72, 0, 139);
+    width: 1pc; /*largura*/
+    height: 1pc; /*altura*/
+}
+.container{
+    font-size: 17px;
+}
+
+.inside{
+    font-size: 2em;  /*Unidade do elemento*/
+    /* também temos o REM, exemplo:
+    font-size: 2rem;  
+    que significa a relação ao tamanho do elemento raiz. */
+}
+
+.vw{
+    background: rgb(194, 37, 37);
+    width: 80vmax;
+}
+
+.borderMargin{
+    height: 10px;
+    background-color: deeppink;
+    margin-top: 50px; /*Aqui é uma margem para o topo!*/
+    padding: 50px; /*Aqui é uma margem, mas para dentro do conteudo!*/
+    border-style: solid; /*aqui estamos setando borda solida*/
+    border-top-color: indigo; /*Aqui é a cor da borda em cima*/
+    border-bottom-color: lawngreen; /*aqui cor da borda em baixo.*/
+    border-width: 10px; /*aqui é uma largura da borda*/
+    border-radius: 100px; /*aqui é uma borda arredondada*/
+
+}
+.conteudo{
+    background-color: gold;
+    margin-left: 50px; /*Aqui é uma margem para a esquerda!*/
+}
+.conteudo2{
+    background-color: green;
+    margin: 50px; /*Aqui é uma margem para todo os lados */
+    border-style: solid;
+    border-color: blue blueviolet red white; /*Uma forma de colocar ja as cores das bordas*/
+    border-width: 5px 2px 10px 15px; /*em cima, direita, em baixo, esquerda*/
+}
+
+.dotted {border-style: dotted;} /*aqui uma borda pontilhada*/
+.dashed {border-style: dashed;} /*Aqui uma borda tracejada*/
+.solid {border-style: solid;} /*Aqui uma borda solida*/
+.none {border-style: none;} /*Aqui sem borda*/
+.hidden{border-style: hidden;} /*Aqui uma borda escondida*/
+
+.bordaFacil{
+    border: 10px solid blue; /*Aqui a gente cria uma borda facil
+    com 10px de largura, o tipo dela, e a cor dela.*/
+}

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>divTamanhos</title>
+    <link href="../CSS/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <h1>Unidades absolutas!</h1>
+    <!--Centimetros-->
+    <div id="cm"></div>
+    <!--Milimetros-->
+    <div id="mm"></div>
+    <!--Polegadas, ela tem 2,54cm-->
+    <div id="in"></div>
+    <!--Pixel-->
+    <div id="px"></div>
+    <!--Ponto-->
+    <div id="pt"></div>
+    <!--Pickers, equivalente a 12pontos-->
+    <div id="pc"></div>
+
+    <h1>Unidades relativas!</h1>
+    <p>Caso a gente não defina a unidade de medida da fonte, por padrão
+        temos 16px.
+    </p>
+    <div class="container">
+        Conteúdo do container
+        <div class="inside">
+            Conteúdo do inside, 1em é unidade do elemento, como essa div esta dentro
+            da div container, ele esta herdando o tamanho da div container.<br><br>
+            Isso significa, 1 vez o texto daquele elemento, se aumentar para 2em, fica como esta.<br><br>
+            Ele multiplica o valor atual pelo numero que adicionar.<br><br>
+
+            Também serve para o width e o height.
+        </div>
+    </div>
+    <br><br>
+    <div class="vw">
+        A unidade relativa "VW" é uma unidade relativa ao tamanho da tela que esta sendo exibida!<br>
+        50vw é 50% da janela.<br>
+        50vh também serve como altura. <br><br>
+
+        Também temos o "vmin", segue a linha de raciocínio das porcentagens.
+        <br>
+        Mas ele é relativo ao menor elemento, se for a altura ou a largura.
+        <br>
+        <br>
+        Também temos o "vmax", tem a mesma linha de raciocínio quanto a porcentagem.
+        <br>
+        Mas ele modifica de acordo com a altura ou largura maxima.
+        <br><br>
+        Também temos a "porcentagem", a porcentagem vai ser sempre relativa a porcentagem do elemento pai.
+        <br>
+        por exemplo, se esta div for a primeira, essa div vai ter a porcentagem do body.
+        <br>
+        Se ela tiver dentro de uma outra div, ela vai sempre ter a porcentagem de acordo com a div que estive em cima
+        dela.
+        <br>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br>
+
+</body>
+
+</html>

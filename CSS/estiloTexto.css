@@ -1,0 +1,95 @@
+p{
+    color: blue; /*aqui a gente muda a cor do texto*/
+    text-transform: capitalize; /*deixa todo as iniciais do texto em maiuscula*/
+    text-transform: lowercase; /*deixa todas as letras em caixa baixa*/
+    text-transform: uppercase; /*deixa todas as letras em minusculo*/
+    text-transform: initial; /*deixa somente a primeira letra em Maiusculo*/
+
+    text-indent: 35px; /*Usado para deixar o paragrafo identado.*/
+
+    text-decoration: underline; /*Aqui é o undeline*/
+    text-decoration: overline; /*Aqui é uma linha em cima*/
+    text-decoration: line-through; /*Aqui é o riscado!*/
+
+    /*da para usar todos!*/
+    text-decoration: underline overline line-through ;
+
+    letter-spacing: 1.5px; /*aqui é o espaçamento entre as letras*/
+    line-height: 100px; /*Aqui é para a altura da linha. Se não usar unidade de medida
+    so usar um numero, fica relacionado ao tamanhdo da fonte. Ele vira um multiplicador*/
+
+    word-spacing: 20px; /*Aqui é a distancia entre as palavras.*/
+
+    text-shadow: 2px 2px 2px black;
+    /*aqui cria uma sombra, sendo: direita, abaixo, intensidade e cor.*/
+
+    /*Agora vamos falar de fontes.*/
+    /*Existe as fontes COM SERIFA, e SEM SERIFA.*/
+    /*Com serifa tem aquele puxado da letra de maquina*/
+    /*Dúvidas pesquisar no google uma imagem comparativa*/
+
+    /*Temos também a fonte MONOSPACE, ou seja, todas elas tem o mesmo tamanho.*/
+
+    font-family: "Quando Uma fonte for de nome composto usa-se aspas duplas", sans-serif;
+    font-style: italic; /*deixando ela em itálico*/
+    font-size: 18px; /*aumentando o fonte.*/
+    font-weight: bold; /*Deixando em negrito. Varia de 0 até 900*/
+    font-variant: small-caps; /*Deixa todas as letras em maiuscula porem respeita as que ja estão e maiusculo*/
+}
+
+a{
+    /*Os links eles tem os estados de VISITADO E NÃO VISITADO.*/
+    
+    text-decoration: none; /*aqui eu tiro todas as decorações, inclusive o underline do link.*/
+    color: blue;
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: 2px solid #357466
+}
+a:visited{
+    text-decoration: none; /*aqui eu tiro todas as decorações, inclusive o underline do link.*/
+    color: rgb(243, 35, 46);
+    padding: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    border-radius: 10px;
+    border: 2px solid #357466
+}
+a:hover{
+    color: chartreuse;
+}
+a:active{
+    background: crimson;
+}
+
+ul{
+    /* list-style-type:disc; */ /*é o padrão*/
+   /*  list-style-type:circle; */ /*é com o disco oco*/
+   /*  list-style-type:square; */ /*é o quadrado preenchido*/
+    /*pode usar uma imagem como marcador também*/
+    list-style-image:url(https://image.webzen.net/Mu/guideImage/bu_titsub.gif);
+    list-style-position: inside; /*aqui colocamos os marcadores dentro da listado*/
+    margin: 0px;
+    padding: 10px;
+    background-color: #f3e;
+}
+
+ol{
+    list-style-type: upper-roman; /*Mostra os numero em romano maiusculo*/
+    list-style-type: lower-roman; /*Mostra os romanos em minusculo.*/
+    list-style-type: upper-alpha; /*Mostra as letras em maiusculo*/
+    list-style-type: lower-alpha; /*Mostra as letras em minusculo*/
+    list-style-type: lower-greek;
+    margin: 0px;
+    padding: 10px;
+    background-color: #59e;
+
+}
+li{
+    border: 1px solid;
+    background-color: yellow;
+    margin: 5px;
+    padding: 5px;
+}
