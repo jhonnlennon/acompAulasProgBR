@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Overflow</title>
+    <style>
+        #container {
+            color: yellow;
+            background-color: blue;
+            width: 300px;
+            height: 100px;
+            overflow: visible;
+            overflow: hidden;
+            overflow: scroll;
+            overflow: auto;
+            overflow-y: auto;
+            /*Acima uma tag muito usada*/
+            /*ela esconde tudo que estiver fora do elemento ID*/
+            /*ou seja, tudo fora da DIV que esta com o ID #container*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <div id="container">
+        O Overflow é quanto temos um conteúdo maior do que o elemento.
+        E podemos trar esse conteúdo para ficar sempre do tamanho do elemento Pai.
+        <br>
+        Temos alguns tipos de overflow, veja abaixo:
+        <ul>
+            <li>overflow:visible</li>
+            Neste caso ele vai mostrar todo o conteúdo mesmo que passe o elemento.
+            <li>overflow:hidden</li>
+            Neste caso, ele esconde todo o conteúdo dentro do elemento, mas também não temos acesso.
+            <li>overflow:scroll</li>
+            Ele adiciona duas barras de rolagem, horizontal e vertical, e coloca o conteúdo dentro do elemento.
+            <li>overflow:auto</li>
+            Aqui ele adiciona uma barra de rolagem onde realmente necessita de acordo com o tamanho do conteúdo
+            relacionado ao elemento.
+            <li>overflow-y:</li>
+            O Overflow X ou Y, são as propriedades que quer adicionar nos eixos, por exemplo
+            podemos adicionar o overflow-y:scroll, apareceria um scroll somento de eixo y.
+            <br>
+            Também podemos usar: overflow-y:scroll e overflow-x:hidden, que adicionaria um scroll
+            somente o eixo Y e no eixo X não adiciona.
+        </ul>
+    </div>
+</body>
+
+</html>

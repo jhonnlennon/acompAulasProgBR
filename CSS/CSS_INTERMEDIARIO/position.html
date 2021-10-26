@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Position!</title>
+    <style>
+        body {
+            font-size: 1.2rem;
+        }
+
+        .quadrado {
+            width: 100px;
+            height: 100px;
+            display: inline-block;
+            /*como a div é um display BLOCK, ele vai ficar um em baixo do outro.
+             pra isso precisamos trocar ele para inline-block, que permite a mudança*/
+        }
+
+        .bg-red {
+            background-color: red;
+        }
+
+        .bg-blue {
+            background-color: blue;
+        }
+
+        .static {
+            position: static;
+            top: 50px;
+            /*<<<<< ele não funciona*/
+            /*Com o elemento position = static, ele não permite mudança para lugar algum*/
+        }
+
+        .relative {
+            position: relative;
+            top: 50px;
+            /*com o elemento position = relative, a gende pode mover para todos os lados*/
+        }
+
+        .fixed {
+            position: fixed;
+            /*Esse cara deixa o elemento fixo de acordo com o 0x 0y da nossa tela*/
+        }
+
+        .absolute {
+            position: absolute;
+            /*Ele vai ficar na posição em relação ao elemento pai, se não tiver, vai ser ao body*/
+            /*ele pode receber outros valores e locais.*/
+            /*ele vai ficar com os valores a partir do elemento pai*/
+        }
+
+        .sticky {
+            position: sticky;
+            /*Esse elemento nao vai poder ter valor menor que zero*/
+            /*Ele também nao vai sair, vai ficar rolando junto com a tela*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Position</h1>
+    <p>Static: O position Static nada mais é que o padrão para todos os elementos.<br>
+        Isso também significa que as propriedades TOP, BOTTOM, LEFT e RIGHT não funcionam.</p>
+
+    <p>Relative: O relativo vai inicialmente ser como o Static, porém, ele pode receber valores:<br>
+        Right, top, left e bottom. E assim ele vai dar um distanciamento de acordo com o valor das propriedades.<br>
+        Deve se entender que o Relative vai sempre contar a partir da posição static original. </p>
+
+    <p>Fixed: O Fixed também recebe os valores de right, top, left e bottom, porém, ele vai ter a relação com a nossa
+        janela! Nos eixos x e y, sendo eles 0. Por exemplo, chat funciona desta forma.</p>
+
+    <p>Absolute: O display absolute, ele vai se posicionar a partir do elemento relative mais proximo a ele.<br>
+        Caso não ocorra, ele vai pegando o mais próximo até que enfim chega no body.</p>
+
+    <p>Sticky: Ele define que o elemento não pode ter o valor menor do que o setado nas suas propriedades.<br>
+        Por exemplo, se colocar o código "top:0", ele ficaria sempre apresentavel na tela. Ja que ele
+        nao recebe valor negativo.</p>
+    <div class="static quadrado bg-red">
+    </div>
+
+    <div class="relative quadrado bg-blue">
+    </div>
+
+
+</body>
+
+</html>

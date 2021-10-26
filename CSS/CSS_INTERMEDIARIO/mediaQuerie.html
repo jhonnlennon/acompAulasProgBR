@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Media Queries!</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            overflow: hidden;
+            margin: auto;
+            width: 80%;
+            background-color: darkslateblue;
+            padding: 15px;
+            font-size: 18px;
+        }
+
+        .menu {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            float: right;
+        }
+
+        li {
+            float: left;
+            color: floralwhite;
+            margin-left: 15px;
+        }
+
+        .logo {
+            float: left;
+            color: floralwhite;
+        }
+
+        .titulo {
+            text-align: center;
+        }
+
+        @media screen and (max-width: 500px) {
+
+            /*o comando acima esta dizendo que qualquer
+            dispositivo que esteja com menos que 400px
+            vai ficar com este css abaixo*/
+            .logo {
+                float: none;
+                text-align: center;
+            }
+
+            .menu {
+                margin-top: 20px;
+                float: none;
+                text-align: center;
+            }
+
+            li {
+                float: none;
+                margin-bottom: 5px;
+                padding: 10px;
+            }
+
+            /*pode ficar repetido, sem problemas.*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Media Queries</h1>
+        <p>Elas servem para dar um comportamento diferente, um css diferente, dependendo do tamanho da tela. <br>
+            Veja um exemplo abaixo
+            <hr>
+        </p>
+    </div>
+    <div class="header">
+        <div class="logo">
+            Logo
+        </div>
+
+        <ul class="menu">
+            <li>Inicio</li>
+            <li>CraftStories</li>
+            <li>Informações</li>
+        </ul>
+    </div>
+</body>
+
+</html>

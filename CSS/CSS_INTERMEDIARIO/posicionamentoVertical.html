@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Posicionamento Vertical</title>
+    <style>
+        .card {
+            float: left;
+            width: 400px;
+            height: 200px;
+            border: 2px solid green;
+            text-align: center;
+            /* Como um div é estatica, ou seja,
+            nao aceita mudança, temos que colocar
+            ela com posição relativa, que vai ser
+            posição relativas ao body */
+            position: relative;
+        }
+
+        .c1 {
+            background-color: hotpink;
+            line-height: 200px;
+            /*aqui para alinhar ao centro
+            usamos o comando line-height
+            mas temos que saber a posição
+            exata do centro do elemento.
+            Neste caso foi 200px.*/
+        }
+
+        .c2 {
+            background-color: indigo;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            /*Nes exemplo, usamos o elemento
+            transform: tanslate(x,y), junto
+            com o top e left 50%*/
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="card">
+        <div class="c1">
+            Jhonn Lennon
+        </div>
+    </div>
+
+    <div class="card">
+        <div class="c2">
+            Jhonn Lennon
+        </div>
+    </div>
+</body>
+
+</html>

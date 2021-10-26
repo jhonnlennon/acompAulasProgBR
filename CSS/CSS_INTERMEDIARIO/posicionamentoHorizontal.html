@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Posicionamento Horizontal</title>
+    <style>
+        #quadrado {
+            width: 50px;
+            height: 50px;
+            background-color: chartreuse;
+            margin: auto;
+        }
+
+        #quadrado2 {
+            width: 50px;
+            height: 50px;
+            background-color: chocolate;
+            margin-left: auto;
+        }
+
+        img {
+            width: 100px;
+            margin: auto;
+            display: block;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Teoria 1</h1>
+    <p>Uma das formas que temos para centralização, seria margem no estilo.<br>
+        Neste caso temos que usar o Margin:Auto, que vai permitir deixar o elemento sempre
+        equilibrado ao centro.</p>
+    <div id="quadrado"></div>
+    <h1>Teoria 2</h1>
+    <p>Uma forma de alinhamento para a direita seria o Margin-Left.<br>
+        Ele vai permitir o elemento sempre ficar alinhado a direita.</p>
+    <div id="quadrado2"></div>
+    <h1>Alinhamento de Imagens</h1>
+    <p>A primeira forma seria transformar o elemento img, em um display tipo block, que vai permitir mudar de
+        posição.<br>
+        Neste caso passa a funcionar o margin, ou o margin lef.</p>
+    <img src="../img/craftstories.jpg" alt="Logo">
+    <p>No caso da tag IMG, não funciona o inline-block. Para o uso do inline-block
+        temos que adicionar a tag IMG dentro de uma DIV por exemplo e usamos o text-align:center por exemplo.
+    </p>
+</body>
+
+</html>

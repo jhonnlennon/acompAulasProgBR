@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Posicionamento Float</title>
+    <style>
+        #i1 {
+
+            float: left;
+            padding: 20px;
+            width: 200px;
+        }
+
+        p {
+            Clear: both;
+            /*Este cara aqui, limpa tudo que o float faz.. Nao permite imagens ou elementos
+            flutuando perto.*/
+        }
+
+        div {
+            border: 1px solid black;
+            overflow: auto;
+            /*com o overflow, eu pego todos os elementos e adiciono dentro da DIV*/
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Entendendo o Float</h1>
+    <p>O Float é uma propriedade do css que permite deixar um elemento flutuando.<br>
+        O código pode ser float:left, float:right... por padrão é float:none;<br>
+        Existe uma propriedade do css que elimina a configuração do float, o código é:<br>
+        clear:both, que não permite qualquer elemento flutuando, mas também temos o
+        clear:right e o clear:left, intuitivamente não permite elementos flutuando de acordo com o lado escolhido.</p>
+    <div>
+        <img id="i1" src="../img/craftstories.jpg">
+        <p>
+            TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE
+            TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE
+            TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE
+            TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE
+            TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE
+            TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE
+            TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE
+            TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE TESTE
+
+        </p>
+    </div>
+</body>
+
+</html>
