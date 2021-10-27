@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulário!</title>
+    <link href="../HTML_INTERMEDIARIO/formulario.html" rel="stylesheet">
+</head>
+
+<body>
+    <div class="titulo">
+        <h1>Criando um formulário!</h1>
+        <p>Um formulário se inicia com a tag "< form>"</p>
+        <p>Devemos sempre dizer qual é o seu método, sendo eles:<br>
+        <ul>
+            <li>GET: Os dados enviados são pelo endereço.</li>
+            <li>POST: É o inverso do GET.</li>
+        </ul>
+        </p>
+        <p>Também devemos dizer qual é sua "ACTION", normalmente para onde deve ir o formulário.</p>
+    </div>
+    <h1>Um buscador de vídeos</h1>
+    <form method="get" action="https://www.youtube.com/results">
+        <input type="text" name="search_query">
+        <input type="submit">
+    </form>
+
+    <hr>
+    <hr>
+
+    <div class="titulo">
+        <h1>Tipos de Input</h1>
+        <p>Existem outros tipos de input, vejamos:</p>
+        <h1>Um campo Login e Senha, text e password</h1>
+        <form method="get" action="">
+            <input type="text" name="login">
+            <input type="password" name="senha">
+            <input type="submit">
+        </form>
+    </div>
+
+    <hr>
+    <hr>
+
+    <div class="titulo">
+        <h1>Um input checkbox</h1>
+        <form method="get" action="">
+            <input type="checkbox" name="curso" value="opt1"> teste. <br>
+            <input type="submit">
+        </form>
+    </div>
+
+    <hr>
+    <hr>
+
+    <div class="titulo">
+        <h1>Um input radio</h1>
+        <p>É importante que o campo NAME seja igual para que a funcionalidade de apenas 1 opção funcione.</p>
+        <p>Usamos um atributo "checked" para deixar marcado uma opção.</p>
+        <form method="get" action="">
+            <input type="radio" name="gender" value="M" checked> Masculino <br>
+            <input type="radio" name="gender" value="F"> Feminino <br>
+            <input type="submit">
+        </form>
+
+        <hr>
+        <hr>
+
+        <div class="titulo">
+            <h1>Um input reset</h1>
+            <p>Um botão de opção de resetar todo o formulário.</p>
+            <p>Usamos a opção value nos types "SUBMIT" e "RESET" para mudar o nome dos botões.</p>
+            <form method="get" action="">
+                <input type="radio" name="gender" value="M" checked> Masculino <br>
+                <input type="radio" name="gender" value="F"> Feminino <br>
+                <input type="submit"> <input type="reset" value="REDEF">
+            </form>
+        </div>
+</body>
+
+</html>

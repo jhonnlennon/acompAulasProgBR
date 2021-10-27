@@ -1,0 +1,17 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+.titulo{
+    text-align: center;
+    margin: auto;
+}
+li{
+    list-style: none;
+}
+form{
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
