@@ -1,0 +1,106 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+}
+.container{
+    max-width: 1000px;
+    margin: auto;
+}
+header{
+    background-color: #48C5CE;
+    padding: 10px;
+    color: white;
+    text-align: center;
+}
+.title{
+    font-size: 26px;
+}
+section{
+padding: 20px;
+background-image: url(../images/people.jpg);
+background-size: cover;
+overflow: hidden;
+}
+.formContainer{
+    max-width: 230px; /*largura maxima do box*/
+    background-color: #ffffffbb; /*cor do box*/
+    padding: 20px; /*espacamento dentro da box*/
+    float: right; /*deixando flutuando a direira*/
+}
+h2{
+    font-size: 16px; /*tamanhdo da fonte para o h2*/
+}
+.mb{
+    margin-bottom: 15px; /*para o espaçamento em baixo dos elementos*/
+}
+input, select{
+    width: 100%; /*deixando ele no tamanho completo da div*/
+    box-sizing: border-box; /*deixando todas as box alinhasdas*/
+    padding: 10px; /*deixando ele mais gordinho*/
+    border: none; /*retirando as bordas*/
+    margin-bottom: 10px; /*colocando espaço entre as box*/
+}
+input[type="submit"]{
+    /*esta forma de css é para editar o css
+    somente do local acima mencionado.
+    Vai ser dentro do input, onde tem é o
+    valor submit*/
+    color: white;
+    background-color:#48C5CE ;
+    font-weight: bold;
+}
+select{
+    -webkit-appearance: none;/*Todos os tres caras abaixo*/
+    -moz-appearance: none;/*retira a aparencia do botão*/
+    appearance: none;/*zerando para cada navegador*/
+
+    background-image: url(../images/arrow.jpg); /*aqui a gente coloca a imagem na box*/
+    background-repeat: no-repeat;/*aqui a gente corrige o fato dela ficar repetindo*/
+    background-position-x: calc(100% - 10px);/*aqui a gente usa o background position calc que permite colocar um calculo. O calculo é 100% ou seja, no final, menos 10px;*/
+    background-position-y: center; /*aqui alinhamos ao centro no eixo y.*/
+}
+p{
+    text-align: justify;
+}
+h2{
+    text-align: center;
+}
+footer{
+    background-color: #202121 ;/*colocando cor no rodapé*/
+    padding: 40px;
+    text-align: center; /*funciona porque ele esta com o inline-block*/    
+}
+.picture{
+    width: 160px;
+}
+.description{
+    display:inline-block;
+    text-align: left;/*forçamos para alinhar a esquerda por conta do text-align acima. */ 
+    color: white;
+    max-width: 40%;
+    margin-left: 40px;
+}
+.description p, .description h3{
+    margin-bottom: 20px; /*com esse css aqui, modificamos apenas
+    a tag P e a tag H3*/
+}
+
+.description h3{
+    /*Pegamos só o elemento h3 dentro da classe description*/
+    font-size: 24px; /*aumentamos a fonte.*/
+}
+
+/*Findando o desafio, deixando abaixo  o formContainer a partir
+de 500px para menos, com a largura maxima do elemento com 400px*/
+@media screen and (max-width:500px){
+    .formContainer{
+        max-width: 400px; /*largura maxima do box*/
+        background-color: #ffffffbb; /*cor do box*/
+        padding: 20px; /*espacamento dentro da box*/
+        float:left; /*deixando flutuando a direira*/
+    }
+}
