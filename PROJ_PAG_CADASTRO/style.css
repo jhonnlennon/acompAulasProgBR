@@ -1,0 +1,207 @@
+/*Abaixo usamos um import para usar a fonte poppins do google fontes.*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400&display=swap');
+
+/*Abaixo resetamos todas as bordas, margins, padding e border box dos navegadores*/
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box; /*aqui dizemos que o tamanho das box, serão as que nos colocarmos*/
+    font-family: "Poppins", sans-serif; /*Aqui dizemos que nossa fonte é a Poppins que importamos, caso contrário, será a sans-serifa mesmo.*/
+}
+body{
+    background-color: #1b2029; /*Aqui definimos nossa cor do background.*/
+    
+    color: white; /*Definimos nossa fonte como branca*/
+    
+    font-weight: 500; /*Definimos que nossa fonte é um pouco mais negrita. bold..*/
+    
+    display: flex; 
+    /*Sobre o display flex.*/
+    /*Torna o elemento um flex container automaticamente
+     transformando todos os seus filhos diretos em flex itens.*/
+    /*Um bom site para entender os tipos de flex:*/
+    /*https://origamid.com/projetos/flexbox-guia-completo/*/
+    
+    min-height: 100vh;
+    /*100vh ou 100vw significa que 100% da altura ou largura
+    em relação a viewport, que é o tamanho total da tela.*/
+}
+main{
+    width: 50vw; /*deixamos nosso main com 50% da largura total da tela. (viewport)*/
+    
+    display: flex; /*dizemos que ele é um display flex, ou seja, vai ter as propriedades do display flex*/
+   
+    flex-direction: column;/*aqui dizemos que a direção é sentido uma coluna*/
+    /*O flex-direction é uma propriedade do display flex*/
+
+    align-items: center; /*Alinhamos os itens ao centro.*/
+    /*O algign items é uma propriedade do display flex.*/
+
+    justify-content: center; /*Alinha os itens ao centro do container.*/
+}
+main h1{
+    /*aqui estilizamos o título do main*/
+    color: #8880FE;
+
+    font-size: 3rem; /*Assim, trazemos responsividade*/
+    /*REM é medido de acordo com o tamanho do elemento raiz
+    ou seja, a tag html.  */
+    /*Aqui ele esta dizendo que quer o tamanho 3x maior
+    que o elemento raiz.*/
+
+    margin-bottom: 3rem; /*Aqui colocamos uma margin em baixo (bottom)*/
+    /*para dar um espaço entre o título e as imagens*/
+}
+main .social-media {
+    display: flex; /*Transformando a div em display flex*/
+    align-content: center; /*alinhando tudo ao centro*/
+}
+main .social-media a{
+    text-decoration: none; /*retiramos a decoração dos links dentro da main.*/
+}
+main .social-media img{ /*Aqui é o caminho de onde queremos aplicar a css.*/
+    width: 36px; /*definindo o tamanho das imagens*/
+    margin-left: 3rem; /*colocando um espaço entre as imagens, a esquerda*/
+}
+
+main .social-media a:first-child img{
+    /*Entendendo esse caminho*/
+    /*Ele diz que dentro do MAIN, na DIV social-media,
+    onde tem a TAG a... Pegue o primeiro filho (first-child) e
+    na tag IMG, faça o seguinte comando abaixo:*/
+    margin-left: 0; /*retiramos a margem da esquerda para deixar alinhado.*/
+}
+main .alternative{
+    margin-top: 1rem; /* deixando mais espaçado das imagens do google, facebook e linkedin */
+}
+main .alternative span{
+    font-size: 1.1rem; /*Aumentando o tamanho da letra*/
+    font-weight: 400; /*voltando ao normal o negrito da fonte, ou seja, vai ficar maior*/
+    color: rgba(255, 255, 255, 0.3); /*Uma cor branca com opacidade de 0.3, ele fica mais cinza*/
+    position: relative; /*deixando nosso span com position relative, porque as propriedade abaixo precisam que ela seja relative, ja que vai ser position absolute*/
+}
+main .alternative span::before, main .alternative span::after{
+    /*Estes são pseudos elementos, vamos usa-los para fazer a linhas antes(before) e depois(after) do nosso OU*/
+    position: absolute; /*para que ele fique relacionado ao relative span*/
+
+    content: ''; /*sempre que usamos pseudo elementos, temos que usar um content.*/
+    /*estudar mais sobre pseudo elementos*/
+
+    height: 1px; /*definimos a altura da nossa linha*/
+
+    width: 100px; /*definimos nossa largura da nossa linha*/
+
+    bottom: 50%; /*alinhamos ela 50% em relação a parte inferior (bottom)*/
+    
+    right: 50px; /*colocamos também ela a direita*/
+
+    background: rgba(255, 255, 255, 0.3); /*Colocamos uma cor*/
+}
+main .alternative span::after{
+    left: 50px; /*Não entendi muito bem, mas ela foi para direita e tirou o duplicado de cima. WTF*/
+    /*Em resumo, ela moveu o de cima.. kkk*/
+}
+
+main form{
+    display: flex; /*transformando o form todo de dentro do main em display flex, para pegar as propriedades do display flex*/
+    flex-direction: column; /*dizemos que a direção dele é coluna*/
+    align-items: center; /*alinhamos ao centro*/
+}
+
+main form label{
+    display: flex; /*dizemos que nosso label é um display flex*/
+    flex-direction: column; /*como queremos os SPAN, ou seja, os noem em cima*/
+    /*alinhamos eles como colunas.*/
+}
+main form label span{
+    /*estilizando o SPAN do label, ou seja, os nomes das boxs*/
+    font-size: 1.1rem; /* aumentamos 10% do tamanho da letra */
+    margin-top: 2rem; /*Criamos uma margin top para aumentar o espaço entre os inputs*/
+}
+main form input{
+    /*Vamos estilizar o nosso Input*/
+    background-color: #161923; /*Trocamos a cor de dentro da box*/
+   
+    width: 300px;/*Aumentamos sua largura*/
+   
+    height: 50px;/*Aumentamos sua altura*/
+
+    /*Agora, para dar espaço dentro da box, usamos o seguinte:*/
+    padding: 0 0.5em;
+    /*Lembrando que o padding 0 sera em cima e baixo e o 0.5rem, é do lado esquero*/
+
+    margin-top: 1rem; /*vamos dar um espaço do SPAN ou seja, os nomes das boxs*/
+
+    outline: none; /*O outline é quando vc seleciona a box e ela fica com cor ou marcada...*/
+
+    color: rgba(166 166 166); /*colocamos cor nas letras, fica cinza*/
+
+    font-size: 1.2rem;/*aumentamos o tamanho da letra de dentro da box*/
+
+    border: 1px solid #040b18; /*Colocamos uma borda solida com 1px e da cor mais escura*/
+
+    border-radius: 8px; /*Colocamos uma borda curva para suavizar a box.*/
+}
+main form input[type="submit"]{
+    /*Explicando o comando acima*/
+    /*Dentro do Main, na TAG form, pegue o INPUT que tiver o tipo SUBMIT*/
+
+    cursor: pointer; /*Aqui quando a seta estiver em cima do botão submit, ela vira uma mãozinha*/
+    /*Top né?! rs*/
+    width: 50%; /*Aqui dizemos que a largura dele é de 50% do tamanho que ele estava originalmente.*/
+
+    margin-top: 4rem; /*Aqui colocamos uma margin em cima dele (top) para dar um espaçamento*/
+
+    border: none; /*retiramos a borda dele*/
+
+    border-radius: 32px; /*deixamos o botão mais arredondado*/
+
+    background-color: #6C63FF; /*Colocamos a cor de fundo dele com um roxo maix claro! Lindo!*/
+
+    color: white; /*Deixamos a palavra na cor branca.*/
+
+    font-size: 1.1rem; /*Aumentamos um pouco a letra*/
+
+    transition: all .3s ease-in-out;/*Estudar mais este comando*/
+    /*Mas ele faz com que fique mais suave a troca da cor quando passamos o mouse em cima dele*/
+}
+main form input[type="submit"]:hover{
+    /*Aqui quer dizer que quando passar o mouse em cima, fique desta cor*/
+    background-color: #5952D4;
+}
+section.images{
+    display: flex; /*Passamos a secção para display flex... para pegar suas propriedades*/
+    align-items: flex-end; /*Alinhamos ele ao final*/
+    padding: 4rem; /*deixamos a section mais espaçada em baixo.*/
+}
+section.images img{
+    width: 90%; /*diminuindo nossa imagem*/
+}
+section.images .circle{
+    position: absolute; /*aqui dizemos que queremos deixar essa section ligada ao body*/
+    /*porque é o seguinte*/
+    /*como não tem nenhum elemento com position relative*/
+    /*automaticamente ele fica relativo ao body*/
+
+    height: 100%; /*deixamos uma altura de 100%*/
+
+    width: 100%; /*deixamos uma largura de 100%*/
+
+    top: 0;
+    left: 0;
+    /*acima, usamos para deixar que este elemento pegue toda a página*/
+
+    background: linear-gradient(45deg, #E8CBC0, #636FA4); /*adicionamos um gradiente*/
+    /*estudar mais esse comando*/
+
+    clip-path: circle(40% at right 80%); /*Este comando aqui, recorta o elemento, neste caso em 50%*/
+    /*o comando, "AT" quer dizer onde posicionar, no nosso caso é a direita*/
+    
+    /*Depois do AT e onde posicionou... Temos 80%, vai de 0% até 100%*/
+    /*sendo 0% totalmente no topo e 100% totalmente em baixo*/
+
+    z-index: -1; /*z-index, é a propriedade das camadas, qual vai sobrepor a outra*/
+    /*ela só funciona com elementos que tenham a propriedade POSITION*/
+}
