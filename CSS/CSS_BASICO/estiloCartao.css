@@ -6,7 +6,7 @@ body{
     width: 700px;
     height: 320px;
     background-repeat: no-repeat;
-    background-image: url(../img/cartaoVisita/backgorund.png);
+    background-image: url(./img/backgorund.png);
     border: 1px solid black;
 }
 h1{
@@ -28,13 +28,13 @@ ul{
     line-height: 50px;
 }
 #youtube{
-    list-style-image: url(../img/cartaoVisita/Youtube.png);
+    list-style-image: url(./img/Youtube.png);
 }
 #instagram{
-    list-style-image: url(../img/cartaoVisita/Insta.png);
+    list-style-image: url(./img/Insta.png);
 }
 #twitter{
-    list-style-image: url(../img/cartaoVisita/Twitter.png);
+    list-style-image: url(./img/Twitter.png);
 }
 
 a{
