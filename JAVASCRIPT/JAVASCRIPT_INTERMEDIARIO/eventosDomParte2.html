@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos - Dom Parte 2</title>
+    <style>
+        img {
+            width: 200px;
+            margin-bottom: 25px;
+            padding: 50px;
+        }
+
+        div {
+            display: inline;
+            margin-top: 150px;
+            padding: 10px;
+            font-size: 2rem;
+            background-color: slateblue;
+            color: white;
+            border-radius: 10px;
+        }
+    </style>
+    <script>
+        function onOver(elemento) {
+            //Atenção por estar usando o javascript, 
+            //quando tem algo separado por hifen
+            //devemos colocar ele em letra maiuscula
+            //vide abaixo.
+            elemento.style.backgroundColor = "green";
+
+        }
+        function onOut(elemento) {
+            elemento.style.backgroundColor = "slateblue";
+        }
+
+    </script>
+</head>
+<!-- Evento onload, vai mostrar toda vez que a página for completamente carregada.-->
+
+<body>
+    <img id="img1" src="./img/gamer.jpg" alt="imagemGamer">
+    <br>
+    <!-- Evento onmouseover é quando passamos o mouse por cima-->
+    <div onmouseover="onOver(this)" onmouseout="onOut(this)" onclick="onHiden()" ondblclick="onStopHiden()">
+        Click</div>
+    <script>
+        function onHiden() {
+            document.getElementById("img1").style.display = "none";
+
+        }
+        function onStopHiden() {
+            /*             document.getElementById("img1").style.display = "block"; */
+            document.getElementById("img1").setAttribute('style', 'display:block')
+        }
+
+    </script>
+</body>
+
+</html>

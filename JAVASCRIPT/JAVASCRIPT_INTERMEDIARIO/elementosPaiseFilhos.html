@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elementos Pai e Filhos</title>
+</head>
+
+<style>
+
+</style>
+<script>
+    //como o script esta em cima e o que queremos fazer esta em baixo
+    //Vamos usar o onload.
+    //Ou seja, window.onload recebe uma função anonima
+    window.onload = function () {
+        //agora vamos pegar o elemento pelo ID
+        let d1 = document.getElementById("d1")
+        //vamos dar um console.log
+        //E é o seguinte, da forma abaixo
+        //ele vai apresentar tudo que esta no id d1
+        //a div, o h1 e o p
+        console.log(d1);
+
+        //agora se quisessemos pegar só o h1 ou o p devemos usar
+        //o children, o filho
+        console.log(d1.children[0]);
+        //Ele vai retornar um array com toda a relação de tag
+        //começando de cima para baixo sendo o primeiro 0.
+
+        //-----//
+        //Agora se quisessemos poderiamos pegar tbm o pai
+        //vamos ver
+        let qualquer = d1.children[0]; // pegamos de dentro da tag div, seu filho
+        console.log(qualquer.parentElement); // agora pegamos o pai, com o comando parentElement de dentro do qualquer que esta com os filhos
+        //------------------------------------//
+
+        //Vamos a outra explicação
+
+        //pegamos todas as tags h1
+        let h1 = document.getElementsByTagName("h1");
+
+        //criamos um for of para saber quantos e quais são
+        for (let h of h1) {
+            console.log(h);//mandamos imprimir no console o que temos de h1
+
+            //agora, adicionamos o evento listener de clicar nos itens que tem em h... os h1
+            h.addEventListener("click", qop) //quando clicar, ele vai rodar a função qop
+        }
+
+        //criamos a função qop
+        function qop(qualquerVariavel) {
+            let t = qualquerVariavel.target; //adicionamos na variavel t uma função nativa "target", para saber em quem estamos clicando. 
+            console.log(t.parentElement); //aqui colocamos para ver o Elemento Parent do t.
+        }
+
+    }
+</script>
+
+<body>
+    <div id="d1">
+        <h1>Título</h1>
+        <p>Qualquer texto</p>
+    </div>
+    <div id="d2">
+        <h1>Título</h1>
+        <p>Qualquer texto</p>
+    </div>
+</body>
+
+</html>

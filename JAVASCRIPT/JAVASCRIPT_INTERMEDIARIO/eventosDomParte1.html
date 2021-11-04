@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos, DOM - Parte 1</title>
+    <script>
+        function h1click() {
+            console.log("Executando a função");
+        }
+    </script>
+    <script>
+        function changeH1() {
+            //Abaixo criamos uma variável para pegar os comando do input
+            //poderiamos ter usado o this, porque estamos pegando o valor dele mesmo.
+            let input = document.getElementById("texto")
+            //Abaixo crimos uma variável para pegar os comandos do h1, como é tagname, vira um array
+            //e claro, queremos o primeiro indice já que só temos 1 tbm..
+            let h1 = document.getElementsByTagName("h1")[0]
+            //abaixo dizemos que o h1, vai ser mudado pelo valor que estiver no input.
+            h1.innerHTML = input.value
+        }
+        function hidenH1() {
+            let h1 = document.getElementsByTagName("h1")[0]
+            h1.style.display = "none";
+        }
+    </script>
+    <style>
+        div {
+            display: inline-block;
+            padding: 20px;
+            font-size: 2rem;
+            background-color: saddlebrown;
+            color: seashell;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 onclick="h1click()">Clique em mim!</h1>
+    <p onclick="console.log(this)">Neste caso aqui, o this esta se referenciado ao próprio elemento.</p>
+    <!-- Com o this e com essa mudança nas propriedades, podemos fazer muita coisa-->
+    <p onclick="this.style.color = 'red'">Aqui, vamos mudar a cor do parágrafo quando clicar.</p>
+
+    <!-- Vamos a outro exemplo!
+    Com o comando onchange, a mudaça é quando clica fora ou da enter-->
+    <!-- Com o comando oninput, vai ser quando digitar os valores-->
+    <input id=texto type="text" onchange="changeH1()">
+
+    <div onclick="hidenH1()">Clique</div>
+
+</body>
+
+</html>
