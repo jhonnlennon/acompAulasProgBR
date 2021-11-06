@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Local Storage</title>
+
+
+    <script>
+        //Nosso objeto windows tem uma propriedade chamada
+        //LocalStorage, para armazenar de forma persistente os dados
+
+        //Ele possui três métodos
+        //1 - setItem
+        //Armazena nos dados do navegado os dados e logo podemos acessá-los
+
+        //2 - getItem
+        //Para usar os dados, usa-se o getItem
+
+        //3 - removeItem
+        //Vai até os dados do navegador e apaga os dados.
+
+        /*        localStorage.setItem("nome", "Jhonn"); */
+
+        /*          let n = localStorage.getItem("nome");
+                     console.log(n); */
+        /* localStorage.removeItem("nome"); */
+        onload = function () {
+            let nome = localStorage.getItem("nome");
+            let h1 = document.getElementById("nome");
+            h1.innerHTML = nome;
+        }
+        function atualizar(variavelQualquer) {
+            let valor = variavelQualquer.value;
+            console.log(valor);
+            let h1 = document.getElementById("nome");
+            h1.innerHTML = valor;
+
+            localStorage.setItem("nome", valor);
+        }
+
+    </script>
+</head>
+
+<body>
+    <h1 id="nome"></h1>
+    <input type="text" oninput="atualizar(this)">
+</body>
+
+</html>
