@@ -80,7 +80,7 @@ span{
     margin-top: 5%;
 }
 
-main form input[type="submit"]{
+main input[type="submit"]{
     /*Explicando o comando acima*/
     /*Dentro do Main, na TAG form, pegue o INPUT que tiver o tipo SUBMIT*/
     padding: 0.5rem 1rem;
@@ -105,18 +105,18 @@ main form input[type="submit"]{
     /*Mas ele faz com que fique mais suave a troca da cor quando passamos o mouse em cima dele*/
 
 }
-main form input[type="submit"]:hover{
+main input[type="submit"]:hover{
     /*Aqui quer dizer que quando passar o mouse em cima, fique desta cor*/
     background-color: #5952D4;
     transform: translateY(-3px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
-main form input[type="submit"]:active{
+main input[type="submit"]:active{
     /*Aqui quer dizer que quando passar o mouse em cima, fique desta cor*/
     transform: translateY(-1px);
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
-main form input{
+main input{
     animation: moveInBottom 5s ease-out;
     animation-fill-mode: backwards;
 }
@@ -131,3 +131,60 @@ main form input{
             transform: translateY(0px);
         }
     }
+    #botao{
+        margin-top: 30px;
+    }
+    #botaoVoltar{
+        /*Explicando o comando acima*/
+        /*Dentro do Main, na TAG form, pegue o INPUT que tiver o tipo SUBMIT*/
+        padding: 0.5rem 1rem;
+    
+        cursor: pointer; /*Aqui quando a seta estiver em cima do botão submit, ela vira uma mãozinha*/
+        /*Top né?! rs*/
+        text-decoration: none;
+
+        width: 100%; /*Aqui dizemos que a largura dele é de 50% do tamanho que ele estava originalmente.*/
+    
+        margin-top: 50px; /*Aqui colocamos uma margin em cima dele (top) para dar um espaçamento*/
+    
+        border: none; /*retiramos a borda dele*/
+    
+        border-radius: 32px; /*deixamos o botão mais arredondado*/
+    
+        background-color: #6C63FF; /*Colocamos a cor de fundo dele com um roxo maix claro! Lindo!*/
+    
+        color: white; /*Deixamos a palavra na cor branca.*/
+    
+        font-size: 1.2rem; /*Aumentamos um pouco a letra*/
+    
+        transition: all .3s ease-in-out;/*Estudar mais este comando*/
+        /*Mas ele faz com que fique mais suave a troca da cor quando passamos o mouse em cima dele*/
+    
+    }
+    #botaoVoltar:hover{
+        /*Aqui quer dizer que quando passar o mouse em cima, fique desta cor*/
+        background-color: #5952D4;
+        transform: translateY(-3px);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    }
+   #botaoVoltar:active{
+        /*Aqui quer dizer que quando passar o mouse em cima, fique desta cor*/
+        transform: translateY(-1px);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+    #botaoVoltar{
+        animation: moveInBottom 5s ease-out;
+        animation-fill-mode: backwards;
+    }
+        @keyframes moveInBottom {
+            0% {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+        
+            100% {
+                opacity: 1;
+                transform: translateY(0px);
+            }
+        }
+    

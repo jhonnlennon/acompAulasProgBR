@@ -14,5 +14,6 @@ console.log(document.body.innerHTML);
 //Agora vamos definir
 //Veja que usamos uma string com a tag html.
 //Depois concatenamos com o document que já existia.
-document.body.innerHTML = "<h1>Queremos editar!</h1>" + document.body.innerHTML
+document.body.innerHTML = "<h1>Queremos editar!</h1>" + "<p>Adicionando um parágrafo!</p>"
+
 

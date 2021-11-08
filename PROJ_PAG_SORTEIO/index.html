@@ -7,18 +7,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./style.css">
     <title>Bora Sortear! - Página de Sorteios</title>
+    <script>
+        function sortear() {
+            let s = document.getElementsByClassName("span")[0];
+            s.innerHTML = "Número Sorteado:"
+            let p = document.getElementById("result");
+            p.innerHTML = Math.round(Math.random() * 10000);
+            let b = document.getElementById("botao");
+            b.innerHTML = '<a href="./index.html" id="botaoVoltar">voltar</a>';
 
+        }
+    </script>
 </head>
 
 <body>
 
     <header>
         <div class="content">
-            <div class="logo">
-                <a href="https://edrodrigues.com.br">
-                    <img src="https://edrodrigues.com.br/wp-content/uploads/2020/06/logo-site-largo-1.jpg"
-                        alt="Ed Rodrigues">
-                </a>
+            <!--           <div class="logo">
             </div>
             <div class="top-menu-container">
                 <ul>
@@ -26,19 +32,19 @@
                     <li>Sorteio de Nomes</li>
                     <li>Sorteio Rápido</li>
                 </ul>
-            </div>
+            </div> -->
         </div>
     </header>
     <main>
         <h1 class="title"> Sortear número aleatório</h1>
         <div class="boxSort">
-            <span class="span">Número Sorteado:</span>
+            <span class="span"></span>
             <div class="random">
-                <p>2.71</p>
+                <p id="result"></p>
             </div>
-            <form action="#">
-                <input type="submit" value="#BoraSortear!">
-            </form>
+            <div id="botao">
+                <input type="submit" value="#BoraSortear!" onclick="sortear()">
+            </div>
         </div>
 
     </main>
