@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Timer e Intervalo</title>
+
+    <script>
+        var interval;
+        function mudarCor() {
+            //Abaixo pego tudo que esta na tag name h1
+            let mc = document.getElementsByTagName("h1")[0];
+            //abaixo pego tudo que esta na tag p
+            let p = document.getElementsByTagName("p")[0];
+            //abaixo acrescento um style na cor azul.
+            mc.style.color = "blue";
+            //abaixo acrescento um numero aleatório
+            p.innerHTML = Math.round(Math.random() * 10000);
+        }
+
+        //O que é o Timer:
+        //Timer é quando vc quer um delay antes de executar o comando/função
+        //Porém ela executa somente uma vez.
+        function mudarTexto() {
+            let h = document.getElementsByTagName("h1")[0];
+            h.innerHTML = "Um número aleatório."
+            h.style.color = "blue"
+            //Veja o comando abaixo
+            //O setTimeout primeiro recebe uma função, depois
+            //em milisegundos o tempo que vc quer.
+            //Ou seja, a função é obrigatória.
+            setTimeout(mudarCor, 1000)
+            //Vale lembrar que temos o setTimeout(), também para o set.
+        }
+
+
+        //Vejamos agora o setInterval.
+        //Tem a mesma sintaxe que acima, veja.
+        function mudarTexto2() {
+            let h = document.getElementsByTagName("h1")[0];
+            h.innerHTML = "Iniciando numeros aleatórios."
+            h.style.color = "blue"
+            interval = setInterval(mudarCor, 1000)
+        }
+
+        //Agora precisamos para o setInterval
+        //Temos uma função nativa para isso
+        //clearInterval
+        function stopRandom() {
+            let h = document.getElementsByTagName("h1")[0];
+            h.innerHTML = "Parando números aleatórios!"
+            h.style.color = "red"
+            clearInterval(interval)
+        }
+    </script>
+</head>
+
+<body>
+    <h1>Título Qualquer</h1>
+    <p>Trocando cor com o setInterval</p>
+
+    <input onclick="mudarTexto()" type="submit" value="Random">
+    <input onclick="mudarTexto2()" type="submit" value="Start Random">
+    <input onclick="stopRandom()" type="submit" value="Stop Random">
+</body>
+
+</html>
