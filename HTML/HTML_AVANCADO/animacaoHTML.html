@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animações com HTML</title>
+    <style>
+        .tela {
+            background-color: aqua;
+            width: 500px;
+            height: 500px;
+            position: relative;
+            /*com o overflow, quando sair da tela
+            vai esconder.*/
+            overflow: hidden;
+        }
+
+        .quadrado {
+            background-color: black;
+            width: 20px;
+            height: 20px;
+            /*lembrando que a posição absolute vai ficar
+            com seus atributos de top e left em relação ao
+            primeiro relative.
+            Caso contrário, será o body.*/
+            position: absolute;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="tela">
+        <div id="jogador" class="quadrado"></div>
+    </div>
+    <script src="./animacaoHTML.js"></script>
+</body>
+
+</html>

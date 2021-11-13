@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Controles de Vídeos - Parte 1</title>
+    <style>
+        .container {
+            /*posição relativa, também é estatica, mas pega as tags
+            top, bottom, left e right*/
+            position: relative;
+            width: 640px;
+            height: 360px;
+            margin: auto;
+        }
+
+        .video {
+            /*aqui nos dizemos que ele tem 100% da largura do pai dele. que é Container*/
+            width: 100%;
+        }
+
+        .controle {
+            /*posição absolute sempre vai pegar o proximo relative.
+            e vai obedecer o que escrever abaixo.*/
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+
+        }
+
+        .btn {
+            position: relative;
+            width: 60px;
+            padding: 10px;
+            top: 100%;
+            transform: translateY(-100%);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container" onmouseover="aparecer()" onmouseout="desaparecer()">
+        <video id="video1" class="video" src="./assets/bemVindo.mp4">
+
+        </video>
+        <div class="controle">
+            <img class="btn" onclick="retroceder()" src="./assets/icons/backward-button.png">
+            <img class="btn" onclick="avancar()" src="./assets/icons/forward-button.png">
+            <img class="btn" onclick="aumentar()" src="./assets/icons/plus-button.png">
+            <img class="btn" onclick="diminuir()" src="./assets/icons/menos-button.png">
+            <img class="btn" onclick="play()" src="./assets/icons/play-button.png">
+            <img class="btn" onclick="pause()" src="./assets/icons/pause-button.png">
+        </div>
+    </div>
+    <script src="./controlesVideos.js"></script>
+</body>
+
+</html>
