@@ -70,6 +70,41 @@ ctx3.stroke();
 //Notei que ele limpa em qualquer um não exatamente no ctx3.
 ctx3.clearRect(250, 20, 30, 30)
 
+//====================================================================//
+//Sobre o beginPath() e o closePath()
+//Vamos criar um novo canvas para exemplificar...
+
+//abaixo pegamos o conteúdo do id "tela3"
+let tela4 = document.getElementById("tela3");
+//abaixo chamamos o Contexto, 2d
+let ctx4 = tela4.getContext("2d");
+//abaixo usamos o beginPath(), ou seja, dizemos que começamos.
+ctx4.beginPath();
+//abaixo dizemos a largura da nossa linha
+ctx4.lineWidth = 4;
+//abaixo dizemos a cor da nossa linha
+ctx4.strokeStyle = "red";
+//abaixo dizemos onde nossa linha vai começar
+ctx4.moveTo(10, 10);
+//abaixo dizemos para onde a linha tem que ir
+ctx4.lineTo(400, 300);
+//abaixo chamamos a função stroke para dezenhar
+ctx4.stroke();
+
+//Sobre o beginPath() e o closePath()
+//Vamos criar umma nova linha para usar o closePath()
+ctx4.beginPath();
+ctx4.lineWidth = 6;
+ctx4.strokeStyle = "Blue";
+ctx4.moveTo(50, 10);
+ctx4.lineTo(300, 300);
+ctx4.lineTo(200, 300);
+//usando o closePath() para fechar o triangulo**..
+ctx4.closePath();
+ctx4.stroke();
+
+
+
 
 
 
